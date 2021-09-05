@@ -63,7 +63,7 @@
       </div>
 
       <div class="container">
-         <div class="row text gx-1 mb-1">
+         <div class="row text gx-1 mb-1 header-bg">
             <h3><i>Wallet friendly yoga by Xena</i></h3>
          </div>
 
@@ -117,11 +117,11 @@
 
                <p class="para-top">"Inhale the future, exhale the past!"</p>
 
-               <p class="para-top">When: 24.-30. September 2020.</p>
+               <p class="para-top">When: 24.-30. September 2022.</p>
 
                <p class="para-top">Where: Bale, Croatia</p>
 
-               <p class="para-top">Price: 2100e all inclusive</p>
+               <p class="para-top">Price: between 1000 and 1300e</p>
             </div>
          </div>
       </div>
@@ -131,7 +131,7 @@
       <!-- Our offer -->
       <div class="container">
          <div  class="row mt-1 gx-1">
-            <div class="col-md-12 div-bg text">
+            <div class="col-md-12 div-bg text header-bg">
                <h4>What to expect?</h4>
             </div>
          </div>
@@ -242,7 +242,7 @@
                   <div class="para-offer">*6 delicious dinners prepared with locally sourced fresh groceries and served in the private tavern*</div>
                   <div class="para-offer">*A complimentary glass of the finest locally produced organic wine*</div>
                   <div class="para-offer">*Transport from and to airport in Pula*</div>
-                  <div class="para-offer">*Return airplane ticket from Dublin to Pula*</div>
+                  <div class="para-offer">*Return airplane ticket from Dublin to Pula (extra charge, depends on a date)*</div>
                   <div class="para-offer">*Attending jazz concert in Bale*</div>
                   <div class="para-offer">*Ancient Roman amphitheatre tour in Pula*</div>
                   <div class="para-offer">*Excursion to the finest beaches in Istria, beach meditation*</div>
@@ -258,7 +258,7 @@
          
          <div class="container">
 
-            <div id="about-us" class="row mt-1 mb-1">
+            <div id="about-us" class="row mt-1 mb-1 header-bg">
                <h4 class="text">About Us</h4>
             </div>
 
@@ -284,13 +284,13 @@
                      friends too! In the spectacular surroundings of Istria, you will find peace and
                      deep relaxation. Practice and explore Yoga and Meditation with Ksenija, eat Tom’s
                      delicious Vegan food, spend time with like minded people or escape for some alone
-                     time!You will also have free time to rest, wander the surrounding area, take time
+                     time! You will also have free time to rest, wander the surrounding area, take time
                      for yourself and even detox in the infrared sauna!
                   </p>
                </div>
             </div>
 
-            <div class="row mt-1 mb-1">
+            <div class="row mt-1 mb-1 header-bg">
                <h4 class="text" >Meet the team</h4>
             </div>
 
@@ -298,14 +298,14 @@
                <div class="col col-md-12 text">
                   <div class="about-us-img-l">
                      <img
-                        class="img-fluid img "
-                        src="multimedia/ksenija.jpg"
+                        class=" img img-fluid about-img"
+                        src="multimedia/about.jpg"
                         alt="Picture of Ksenija, yoga teacher"
                      />
                      <p style="margin: 0">Ksenija Brajkovic Yoga teacher</p>
                   </div>
 
-                  <p class="details-1">
+                  <p class="details-2">
                      "In 2020, I became the founder and director of Wallet friendly yoga by Xena. While
                      growing up in Croatia, all I could envision for myself was living life in the
                      sunshine, under the palm trees. Over 10 years of soul-searching I explored city
@@ -375,7 +375,7 @@
          <!-- Contact us -->
          <div class="container">
             <div id="contact" class="row mt-1">
-               <div class="col-md-12 div-bg text">
+               <div class="col-md-12 div-bg text header-bg">
                   <h3>Contact us</h3>
                </div>
             </div>
@@ -394,7 +394,7 @@
 
             <div class="row mt-1" >
 
-               <div class="col-md-5 div-bg" style="height: 700px; overflow-y: auto;">
+               <div class="col-md-5 div-bg" style="height: 500px; overflow-y: auto;">
                   <h5 style="padding-top: 10px;" >Price breakdown / Room type</h5>
                   <div>
                      Room selection available as:
@@ -434,49 +434,32 @@
                </div>
 
 
-               <div class="col-md-7 div-bg offer" style="height: 700px;">
+               <div class="col-md-7 div-bg offer" style="height: 500px;">
                   <div class="form">
                      <h5 style="padding-top: 10px; margin: 15px; text-align: center;">Booking</h5>
-                     <form >
+                     <form action="https://sheetdb.io/api/v1/k2ygdyxsxoxdc" method="POST" id="sheetdb-form">
                         <div>
                            <label for="name">First name</label>
-                           <input type="text" id="name" placeholder="First name" required >
+                           <input type="text" name="data[First name]" id="name" placeholder="First name" required >
                         </div>
 
                         <div>
                            <label for="lastName">Last name</label>
-                           <input type="text" id="lastName" placeholder="Last name" required >
+                           <input type="text" name="data[Last name]" id="lastName" placeholder="Last name" required >
                         </div>
 
                         <div>
                            <label for="email">Email</label>
-                           <input type="email" id="email" placeholder="johndoe@gmail.com" required>
+                           <input type="email" name="data[Email]" id="email" placeholder="johndoe@gmail.com" required>
                         </div>
 
                         <div>
                            <label for="phone">Phone number</label>
-                           <input type="tel" id="phone" placeholder="+000 00 000 0000" required >
+                           <input type="tel" name="data[Phone number]" id="phone" placeholder="+000 00 000 0000" required >
                         </div>
 
-                        <div>
-                           <label for="roomType">Room type:</label>
-                           <select style="display: block;" name="Room type" id="roomType" required >
-                              <option value="" disable selected>Please choose your option:</option>
-                              <option value="Single room">Single room </option>
-                              <option value="Double room">
-                                 Double room per person 
-                              </option>
-                              <option value="Twin room">Twin room </option>
-                           </select>
-                        </div>
-
-                        <div>
-                           <label for="coments">Comments</label>
-                           <textarea name="coments" id="coments" cols="35" rows="4" placeholder="Comments..."></textarea>
-                        </div>
-
-                        
-                        <input class="sub-btn" type="submit" value="Book now">
+                                                
+                        <input class="sub-btn" type="submit" value="Book now" style="margin-top: 40px;">
                      
                      </form>
                   </div>
@@ -485,14 +468,14 @@
          </div>
          
 
-      <div class="div-bg mt-1">
+      <div class="div-bg mt-1 header-bg">
          <div class="footer-div">
 
             <p class="footer">
                <b>Mobile:</b>  +363 (0)83 1234567
             </p>
             
-            <p class="footer" class="copyright"> <b>Copyright © 2020 Walletfriendlyyoga</b> </p>
+            <p class="footer" class="copyright"> <b>Copyright © 2021 Walletfriendlyyoga</b> </p>
 
             <p class="footer"> <button style="border-radius: 10px;"><a href="#navbar"> <b>Back to top</b> </a></button> </p>
          </div>

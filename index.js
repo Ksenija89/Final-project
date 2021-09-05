@@ -1,26 +1,42 @@
-// form data storing on LG screen
 
-const form = document.querySelector('form');
+//Highlighting the offer paragraph as the user reed and moves down the page
 
-form.addEventListener('submit', e=>{
+const hover = document.querySelector('#retreat')
 
-    e.preventDefault();
-    
-    const data = {
-        firstName:form.name.value,
-        lastName:form.lastName.value,
-        email:form.email.value,
-        phoneNumber:form.phone.value,
-        roomType:form.roomType.value,
-        comments:form.coments.value
-    };
+// This handler will be executed every time the cursor
+// is moved over a row div
+hover.addEventListener("mouseover", function( event ) {
+    // highlight the mouseover target
+    event.target.style.backgroundColor = "silver";
+  
+    // reset the color after a short delay
+    setTimeout(function() {
+      event.target.style.backgroundColor = "";
+    }, 5000);
+  }, false);
 
-    // db.collection('Yoga retreat').add(formData).then(()=>{
-    //     console.log('Data form added');}).catch(err=>{
-    //         console.log(err);
-    //     });
+//headers background color
 
-        alert('Thank you ' + form.name.value + '. Your retreat is booked successfully!')
+function changeColor() {
+	let colour = document.getElementsByClassName('header-bg'); // get all elements
+	for(i = 0; i < elements.length; i++){
+		colour[i].style.backgroundColor = "silver";
+	}
+}
 
-        console.log(data);
-})
+
+//Storing data inside google sheet
+
+var form = document.getElementById('sheetdb-form');
+form.addEventListener("submit", e => {
+  e.preventDefault();
+  fetch(form.action, {
+      method : "POST",
+      body: new FormData(document.getElementById("sheetdb-form")),
+  }).then(
+      response => response.json()
+  ).then((html) => {
+    // you can put any JS code here
+    alert('Thank you for visiting our website. We will contact you soon for further instructions.')
+  });
+});
